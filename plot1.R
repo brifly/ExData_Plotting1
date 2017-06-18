@@ -8,7 +8,8 @@ plot1 <- function() {
   rel$Global_active_power <- as.numeric(rel$Global_active_power)
   
   # Plot
-  png("plot1.png", width = 480, height = 480)
+  png("plot1.png", width = 480, height = 480, bg="transparent")
+  par(bg="transparent")
   hist(rel$Global_active_power, 12, col = "red", main="Global Active Power", xlab = "Global Active Power (kilowatts)")
   dev.off()
 }
