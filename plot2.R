@@ -8,8 +8,7 @@ plot2 <- function() {
   rel$Global_active_power <- as.numeric(rel$Global_active_power)
   rel$Time <- strptime(paste(as.character(rel$Date), rel$Time), format = "%Y-%m-%d %H:%M:%S")
   
-  png("plot2.png", width = 480, height = 480, bg="transparent")
-  par(bg="transparent")
+  png("plot2.png", width = 480, height = 480)
   plot(rel$Time, rel$Global_active_power, type = "l", ylab="Global Active Power (Kilowatts)", xlab = "")
   dev.off()
    

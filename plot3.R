@@ -8,8 +8,7 @@ plot3 <- function() {
   rel$Global_active_power <- as.numeric(rel$Global_active_power)
   rel$Time <- strptime(paste(as.character(rel$Date), rel$Time), format = "%Y-%m-%d %H:%M:%S")
   
-  png("plot3.png", width = 480, height = 480, bg="transparent")
-  par(bg="transparent")
+  png("plot3.png", width = 480, height = 480)
   
   plot(rel$Time, rel$Sub_metering_1, type="n", xlab = "", ylab = "Energy sub metering")
   lines(rel$Time, rel$Sub_metering_1)

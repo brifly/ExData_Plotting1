@@ -8,9 +8,8 @@ plot4 <- function() {
   rel$Global_active_power <- as.numeric(rel$Global_active_power)
   rel$Time <- strptime(paste(as.character(rel$Date), rel$Time), format = "%Y-%m-%d %H:%M:%S")
   
-  png("plot4.png", width = 480, height = 480, bg="transparent")
+  png("plot4.png", width = 480, height = 480)
   par(mfrow=c(2,2))
-  par(bg="transparent")
   
   plot(rel$Time, rel$Global_active_power, type = "l", ylab="Global Active Power", xlab = "", bg="transparent")
   
